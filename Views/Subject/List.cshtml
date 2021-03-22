@@ -1,0 +1,23 @@
+﻿@model Subject
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Предмет</th>
+            <th>Препод</th>
+            <th>Задание</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+            @foreach (var unit in Model.Units)
+            {
+            <tr>
+
+                <td class="text-center">@Model.Name</td>
+                <td class="text-center">@Model.Teacher</td>
+                <td class="text-center"><a asp-controller=@Model.Name asp-action=@unit.Name>@unit.Name</a></td>
+            </tr>
+                }
+            
+    </tbody>
+</table>

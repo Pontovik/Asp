@@ -1,0 +1,17 @@
+﻿@model CountEuclid
+
+<p class="text-center">Вы ввели число=:@Model.Index1</p>
+<p class="text-center">Степени=:@Model.Index2</p>
+<p class="text-xl-center">Выражение:@Model.Index1 x +@Model.Index2 y = 1  </p>
+<h1 class="text-center">Разложение по Евклиду</h1>
+@for (int i = 0; i < Model.Quots.Count(); i++)
+{
+    <p> @Model.TempResults[i]= @Model.Quots[i] * @Model.Factors[i] + @Model.Remainders[i]</p>
+}
+
+
+
+
+<b>X:=@Model.Results[1] Y:=@Model.Results[0]</b>
+
+@Html.Partial("Footer")

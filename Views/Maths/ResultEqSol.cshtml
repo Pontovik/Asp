@@ -1,0 +1,16 @@
+﻿@model CountEqSol
+<div class="text-center">
+    <h2> Вы ввели</h2>
+    <p>@Model.FromForm[0]x+@Model.FromForm[1]y=1</p>
+
+    @for (int i = 0; i < 2; i++)
+    {
+        <p></p>
+        for (int j = 0; j < 2; j++)
+        {
+            <b>@Model.Matrix[i, j]</b>
+        }
+    }
+</div>
+<p><b>Ваш ответ: X=@Model.Matrix[0, 1], Y=@Model.Matrix[1, 1]</b></p>
+@Html.Partial("Footer")

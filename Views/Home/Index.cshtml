@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Subject>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Предмет</th>
+            <th>Препод</th>
+            <th>Начало</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sub in Model)
+        {
+
+            <tr>
+
+                <td class="text-center">@sub.Name</td>
+                <td class="text-center">@sub.Teacher</td>
+                <td class="text-center">@sub.Time</td>
+            </tr>
+        }
+    </tbody>
+</table>

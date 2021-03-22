@@ -1,0 +1,14 @@
+﻿@model CountEqSol
+<body>
+    <form method="post" asp-action="EqSolution">
+        <div class="form-group">
+            <label helper-for="X">Введите число при X</label>
+            <input helper-for="X"  />
+        </div>
+        <div class="form-group">
+            <label helper-for="Y">Введите число при Y</label>
+            <input helper-for="Y" />
+        </div>
+        <button class="btn  btn-warning m-1 p-2" type="submit">Посчитать</button>
+    </form>
+</body>

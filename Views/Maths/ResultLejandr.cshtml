@@ -1,0 +1,23 @@
+﻿@model CountLejandr
+<div class="text-center">
+    <p>Вы ввели число=:@Model.Data</p>
+    <p>Степени=:@Model.Degree</p>
+    <p>Модуля:=@Model.Module</p>
+    <p>Символ Лежандра:=@Model.Res</p>
+    <h2>Итог</h2>
+    @{
+        <h3>@ViewBag.Message</h3>
+        @if (ViewBag.Message == "Сравнение разрешимо")
+        {
+
+            @foreach (var key in Model.ResultLejandr)
+            {
+                <p>Ответы:@key</p>
+            }
+        }
+
+    }
+
+
+</div>
+@Html.Partial("Footer")

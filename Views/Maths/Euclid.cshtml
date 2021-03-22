@@ -1,0 +1,23 @@
+﻿@model CountEuclid
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exponenta</title>
+</head>
+
+<body>
+    <form method="post" asp-action="Euclid">
+        <div class="form-group">
+            <label asp-for="Index1">Введите показатель при x</label>
+            <input class="form-control" asp-for="Index1" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Index2">Введите показатель при y</label>
+            <input class="form-control" asp-for="Index2" />
+        </div>
+
+        <button class="btn  btn-warning m-1 p-2" type="submit">Посчитать</button>
+    </form>
+
+</body>
+</html>

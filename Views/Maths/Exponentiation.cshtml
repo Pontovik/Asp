@@ -1,0 +1,18 @@
+﻿@model CountExp
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exponenta</title>
+</head>
+<body>
+    <form method="post" asp-action="Exponentiation">
+        <div class="form-group">
+            <label helper-for="Degree">Введите степень</label>
+            <input helper-for="Degree" />
+        </div>
+        @Html.Partial("ExpForm")
+
+    </form>
+    
+</body>
+</html>
